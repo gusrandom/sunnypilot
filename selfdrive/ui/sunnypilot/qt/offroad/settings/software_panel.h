@@ -11,6 +11,8 @@
 #include "selfdrive/ui/sunnypilot/qt/util.h"
 #include "selfdrive/ui/qt/offroad/settings.h"
 
+class ButtonControlSP;  // forward declaration
+
 class SoftwarePanelSP final : public SoftwarePanel {
   Q_OBJECT
 
@@ -21,6 +23,11 @@ private:
   void searchBranches(const QString &query);
   ParamControl *disableUpdatesToggle = nullptr;
   void handleDisableUpdatesToggled(bool state);
+
+  // New: Patch controls
+  ButtonControlSP *patchCheckBtn = nullptr;
+  ButtonControlSP *patchApplyBtn = nullptr;
+
 private slots:
   void updateDisableUpdatesToggle(bool offroad);
 protected:
