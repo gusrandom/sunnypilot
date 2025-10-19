@@ -1,2 +1,2 @@
-# Always KEEP OUR VERSION of opendbc torque files during merges
-opendbc_repo/opendbc/** merge=ours
+# Always KEEP OUR VERSION of everything under opendbc_repo during merges
+opendbc_repo/** merge=ours
